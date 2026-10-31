@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e0d0c">
+<title>Политика конфиденциальности</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:start center;padding:18px;color:#f2ece4;font:15px/1.6 'Manrope',system-ui,sans-serif;background:radial-gradient(800px 500px at 70% 0,rgba(201,157,120,.24),transparent 62%),#0e0d0c}
+.card{width:100%;max-width:640px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:24px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:24px;margin-top:12px}
+h1{font-family:'Unbounded','Manrope',sans-serif;font-weight:700;font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+h2{font-family:'Unbounded','Manrope',sans-serif;font-weight:700;font-size:14px;margin:20px 0 6px}
+p,li{color:#d8d0c6}ul{padding-left:20px;margin:6px 0}li{margin-bottom:4px}
+.mu{color:#a79f95}a{color:#e9c7a6;font-weight:700;text-decoration:none}a:focus-visible{outline:2px solid #e9c7a6;outline-offset:2px}
+.nb{flex:1 1 160px;display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:14px;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;color:#f2ece4;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.nb:active{transform:scale(.98)}
+.nb2{background:linear-gradient(180deg,#f0d3b6,#d9b08c);color:#201710;border:0}
+body{animation:gpFade .45s ease both}
+body.leave{opacity:0;transform:translateY(10px);transition:opacity .26s ease,transform .26s ease}
+@keyframes gpFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){body,body.leave{animation:none;transition:none;transform:none}}
+</style>
+</head>
+<body>
+<main class="card">
+<h1>Политика конфиденциальности</h1>
+<p class="mu">Действует с 31 октября 2026 г.</p>
+
+<h2>1. Какие данные собираются</h2>
+<ul>
+<li>адрес Google-почты и имя из аккаунта Google (при входе);</li>
+<li>данные профиля, которые вводит пользователь: текущий и желаемый вес, рост, возраст, пол, количество тренировок в неделю;</li>
+<li>записи веса, дневник тренировок, отметки таймера тренировок;</li>
+<li>заявка на доступ: почта, имя, дата, отметка согласия с этой политикой, дата последнего входа.</li>
+</ul>
+
+<h2>2. Зачем нужны данные</h2>
+<p>Чтобы показывать прогресс, рассчитывать срок, калории и белок, сохранять записи в облаке и синхронизировать их между устройствами пользователя. Заявка на доступ нужна, чтобы владелец мог её рассмотреть.</p>
+
+<h2>3. Кто видит данные</h2>
+<p>Записи и профиль каждого пользователя доступны только ему самому. Владелец видит список заявок, одобренных почт и дату последнего входа, но не видит записи пользователей в приложении.</p>
+
+<h2>4. Где хранятся данные</h2>
+<p>В облачной базе данных Firebase (сервисы Google). Копия также может храниться в браузере на устройстве пользователя.</p>
+
+<h2>5. Передача третьим лицам</h2>
+<p>Данные не продаются и не передаются третьим лицам. Исключение: технические сервисы Google (хостинг и база данных), без которых приложение не работает.</p>
+
+<h2>6. Срок хранения</h2>
+<p>Данные хранятся, пока у пользователя есть доступ к приложению, либо до их удаления по запросу.</p>
+
+<h2>7. Права пользователя</h2>
+<ul>
+<li>посмотреть, исправить и удалить свои записи и профиль. Записи и профиль удаляются кнопкой «Удалить мои данные» в разделе «Мой профиль»;</li>
+<li>удалить заявку и почту из списка, отозвать согласие или задать любой вопрос: напиши в Instagram <a href="https://instagram.com/mura.a9" target="_blank" rel="noopener">mura.a9</a>.</li>
+</ul>
+
+<h2>8. Согласие</h2>
+<p>Отмечая галочку на странице входа, пользователь соглашается на обработку перечисленных данных для целей из пункта 2. Согласие можно отозвать в любой момент, написав владельцу.</p>
+
+<h2>9. Не медицинская услуга</h2>
+<p>Приложение не заменяет консультацию врача или тренера и не является медицинским сервисом.</p>
+
+<nav style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px">
+<a class="nb" href="./">← Ко входу</a>
+<a class="nb nb2" href="./">На главную →</a>
+</nav>
+</main>
+<script>
+(function(){
+ document.querySelectorAll('a.nb').forEach(function(a){
+  a.addEventListener('click',function(e){
+   if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return;
+   e.preventDefault();
+   var href=a.href;
+   document.body.classList.add('leave');
+   setTimeout(function(){location.href=href},260);
+  });
+ });
+})();
+</script>
+</body>
+</html>
