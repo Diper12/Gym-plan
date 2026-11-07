@@ -9,8 +9,9 @@
 <link href="https://diper12.github.io/Gym-plan/icon-180.png" rel="apple-touch-icon"/>
 <link href="https://diper12.github.io/Gym-plan/icon-192.png" rel="icon" type="image/png"/>
 <link href="https://diper12.github.io/Gym-plan/manifest.webmanifest" rel="manifest"/>
-<meta content="GymMura" name="apple-mobile-web-app-title"/>
+<meta content="GymX" name="apple-mobile-web-app-title"/>
 <title>План набора массы</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Amiri:wght@400;700&amp;family=Unbounded:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -125,12 +126,17 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 .consent input{margin-top:4px;width:18px;height:18px;flex:none}
 .consent a{color:var(--ac);font-weight:700}
 .signout{margin-top:14px}
-</style>
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:10px;margin-top:8px}
+.wtile{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(0,0,0,.28));border:1px solid var(--bd);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.wtile small{color:var(--mu);font-size:12px}
+.wtile b{font-family:'Unbounded','Manrope',sans-serif;font-size:20px;letter-spacing:-.01em;margin-bottom:4px}
+.wtile .pill{font-size:12px;padding:5px 12px}
+#greet.en,.top h1.gr.en{font-family:'Noto Serif',Georgia,serif;font-style:italic;font-weight:600;letter-spacing:0;font-size:25px!important}</style>
 </head>
 <body>
 <section id="auth" class="auth">
 <div class="glass auth-card">
-<h1 class="gr">GymMura</h1>
+<h1 class="gr">GymX</h1>
 <p class="mu" id="aus">Подключаю облако…</p>
 <button class="btn w" id="ab" type="button" disabled>Войти через Google</button>
 <label id="csw" class="consent" hidden><input type="checkbox" id="cs"><span>Я прочитал(а) <a href="privacy.html">политику конфиденциальности</a> и согласен(на) на обработку перечисленных в ней данных.</span></label>
@@ -139,7 +145,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <p class="mu sm" id="chk"></p>
 </div>
 </section>
-<div class="app" hidden><header class="top"><div class="hd"><h1 class="gr" id="greet"><span class="gico" id="gico" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12"/></svg></span><span id="gtxt">Ас-Саляму Алейкум</span></h1><div class="mu" id="sub">Твой план набора массы · <span id="dt"></span></div></div></header><section class="page" id="pg-plan"><section class="glass"><div class="goal"><div class="mu sm">Цель</div><h3>Набор массы</h3><div class="mu">Больше силы. Больше мышц. Лучше ты.</div>
+<div class="app" hidden><header class="top"><div class="hd"><h1 class="gr" id="greet"><span class="gico" id="gico" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12"/></svg></span><span id="gtxt">As Salam Alaikum</span></h1><div class="mu" id="sub">Твой план набора массы · <span id="dt"></span></div></div></header><section class="page" id="pg-plan"><section class="glass"><div class="goal"><div class="mu sm">Цель</div><h3>Набор массы</h3><div class="mu">Больше силы. Больше мышц. Лучше ты.</div>
 <div class="trio"><div class="mini"><span>Текущий вес</span><b id="cw">68 кг</b></div><div class="mini"><span>Целевой вес</span><b id="tg">—</b></div><div class="mini"><span>Срок</span><b id="sr">—</b></div></div></div></section><div class="stats">
 <div class="glass stat"><span class="mu sm">Тренировок в неделю</span><b>4 из 7</b><div class="seg"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
 <div class="glass stat"><span class="mu sm">Калорийность</span><b id="kc">—</b><span class="mu sm">ккал в день</span></div>
@@ -172,16 +178,13 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 <div class="two" style="margin-top:12px"><div><svg aria-label="График веса" class="ch" id="wch" role="img" viewbox="0 0 320 140"></svg></div>
 <div><svg aria-label="Диаграмма тренировок по неделям" class="ch" id="sch" role="img" viewbox="0 0 320 140"></svg></div></div>
 <div class="mu sm" id="wavg" style="margin-top:6px"></div>
-<div class="lb" style="margin-top:14px">Записи веса</div><div class="mu sm" id="wl">Пока нет записей.</div>
+<div class="lb" style="margin-top:14px">Записи веса</div><div class="wgrid" id="wl">Пока нет записей.</div>
 </section><section class="glass" id="diary"><h2>Дневник</h2>
 <div class="lb">Запись тренировки</div>
 <div class="row"><select aria-label="День" id="ld"></select><button class="btn" id="lb" type="button">Сохранить запись</button></div>
 <textarea aria-label="Запись тренировки" id="lt" placeholder="Например: жим лёжа 40 кг × 8 / 8 / 7 / 6. Кисть: норм"></textarea>
 <div id="ll"></div>
 <div class="mu sm" id="tst" style="margin-top:8px"></div>
-<div class="warn" hidden="" id="bw" style="margin:10px 0"></div>
-<div class="row"><button class="btn o" id="bd" type="button">Скачать копию</button><button class="btn o" id="bc" type="button">Скопировать текст</button><button class="btn o" id="br" type="button">Восстановить</button></div>
-<div hidden="" id="rb"><textarea aria-label="Текст копии" id="rt" placeholder="Вставь сюда текст копии"></textarea><div class="row"><button class="btn o" id="ri" type="button">Загрузить текст</button><button class="btn o" id="rf" type="button">Выбрать файл</button><input accept=".json,application/json" hidden="" id="bf" type="file"/></div></div>
 </section></section><section class="page" id="pg-prof"><section class="glass" id="prof"><h2>Мой профиль</h2>
 <div class="mu sm">Текущий вес и желаемый вес. Остальное приложение посчитает само.</div>
 <div class="row"><input id="pw" placeholder="Текущий вес, кг" step="0.1" type="number"/><input id="pg" placeholder="Желаемый вес, кг" step="0.1" type="number"/></div>
@@ -277,7 +280,7 @@ function draw(){
   if(w.length>1)el('polyline',{points:p.map(function(a){return a.join(',')}).join(' '),fill:'none',stroke:'#e9c7a6','stroke-width':2.5});
   p.forEach(function(a,i){el('circle',{cx:a[0],cy:a[1],r:4,fill:'#e9c7a6'});el('text',{x:a[0],y:a[1]-9,fill:'#f2ece4','font-size':14,'font-weight':700,'text-anchor':'middle'},w[i].kg)})}
  var wl=$('wl');wl.innerHTML=w.length?'':'Пока нет записей.';
- w.slice().reverse().slice(0,8).forEach(function(r){var d=document.createElement('div');d.className='log wrow';var s=document.createElement('span');s.textContent=new Date(r.date+'T00:00:00').toLocaleDateString('ru-RU')+' — '+r.kg+' кг';var x=document.createElement('button');x.type='button';x.className='x pill';x.textContent='Удалить';x.setAttribute('aria-label','Удалить запись веса '+r.kg);x.onclick=function(){if(x.dataset.s==='1'){rm(r.id);return}x.dataset.s='1';x.textContent='Точно удалить?';x.classList.add('arm');setTimeout(function(){if(x.isConnected){x.dataset.s='';x.textContent='Удалить';x.classList.remove('arm')}},4000)};d.appendChild(s);d.appendChild(x);wl.appendChild(d)});
+ w.slice().reverse().forEach(function(r){var t=document.createElement('div');t.className='wtile';var dt=document.createElement('small');dt.textContent=new Date(r.date+'T00:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short',year:'numeric'});var kg=document.createElement('b');kg.textContent=r.kg+' кг';var x=document.createElement('button');x.type='button';x.className='x pill';x.textContent='Удалить';x.setAttribute('aria-label','Удалить запись веса '+r.kg);x.onclick=function(){if(x.dataset.s==='1'){rm(r.id);return}x.dataset.s='1';x.textContent='Точно удалить?';x.classList.add('arm');setTimeout(function(){if(x.isConnected){x.dataset.s='';x.textContent='Удалить';x.classList.remove('arm')}},4000)};t.appendChild(dt);t.appendChild(kg);t.appendChild(x);wl.appendChild(t)});
  if(w.length){
   var av=w.map(function(r){var t0=new Date(r.date+'T00:00:00').getTime(),sel=w.filter(function(q){var t1=new Date(q.date+'T00:00:00').getTime();return t1<=t0&&t1>t0-6*864e5});return sel.reduce(function(s,q){return s+q.kg},0)/sel.length});
   el('polyline',{points:av.map(function(v,i){return (w.length>1?28+i*284/(w.length-1):170)+','+Y(v)}).join(' '),fill:'none',stroke:'#f2ece4','stroke-opacity':.55,'stroke-width':2,'stroke-dasharray':'3 4'});
@@ -292,7 +295,7 @@ var last=w[w.length-1];$('cw').textContent=last?last.kg+' кг':(prof?prof.kg+' 
  $('wc').textContent=wt.length+' / 4';$('wt').textContent=mn>=60?Math.floor(mn/60)+' ч '+(mn%60)+' мин':mn+' мин';$('wp').style.width=Math.min(wt.length/4,1)*100+'%';
  var L=rows.filter(function(r){return r.t==='l'}).sort(function(a,b){return b.ts-a.ts}).slice(0,12),box=$('ll');box.innerHTML='';
  L.forEach(function(r){var d=document.createElement('div');d.className='log';var sm=document.createElement('small');sm.textContent=r.day+' · '+new Date(r.ts).toLocaleDateString('ru-RU');var x=document.createElement('button');x.type='button';x.className='x pill';x.textContent='Удалить';x.setAttribute('aria-label','Удалить запись');x.onclick=function(){if(x.dataset.s==='1'){rm(r.id);return}x.dataset.s='1';x.textContent='Точно удалить?';x.classList.add('arm');setTimeout(function(){if(x.isConnected){x.dataset.s='';x.textContent='Удалить';x.classList.remove('arm')}},4000)};sm.appendChild(x);var sp=document.createElement('span');sp.textContent=r.text;d.appendChild(sm);d.appendChild(sp);box.appendChild(d)});
- warn()}
+ if(window.gpBackup)window.gpBackup(rows).catch(function(){});warn()}
 $('pb').onclick=function(){
  var kg=parseFloat($('pw').value.replace(',','.')),g=parseFloat($('pg').value.replace(',','.')),hh=parseFloat($('ph').value),aa=parseInt($('pa').value,10),s=$('ps').value,d=parseInt($('pd').value,10)||4;
  var msg=function(t){$('pm').textContent=t};
@@ -335,22 +338,8 @@ function tick(){var s=st?Math.floor((Date.now()-st)/1000):0,m=Math.floor(s/60);
 $('ts').onclick=function(){if(!st){st=Date.now();try{localStorage.setItem(TK,st)}catch(e){}}else{var min=Math.round((Date.now()-st)/60000);if(min>=1)put({id:'t'+st,t:'t',ts:st,min:min});st=0;try{localStorage.removeItem(TK)}catch(e){}}tick()};
 setInterval(tick,1000);tick();
 
-/* копии */
-function payload(){return JSON.stringify({app:'gym-plan',v:2,at:new Date().toISOString(),rows:rows})}
-function mark(){try{localStorage.setItem(LS+'_bk',String(Date.now()))}catch(e){}warn()}
-function warn(){var b=$('bw'),k=0;try{k=+localStorage.getItem(LS+'_bk')||0}catch(e){}
- if(rows.length&&(!k||Date.now()-k>6048e5)){b.hidden=false;b.textContent=k?'Копия старше 7 дней. Нажми «Скачать копию».':'Резервной копии ещё нет. Нажми «Скачать копию» и сохрани файл.'}else b.hidden=true}
-$('bd').onclick=function(){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([payload()],{type:'application/json'}));a.download='gym-plan-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();mark()};
-$('bc').onclick=function(){var s=payload();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){mark();$('tst').textContent='Копия скопирована. Вставь её в заметки.'},function(){$('rt').value=s;$('rb').hidden=false})}else{$('rt').value=s;$('rb').hidden=false}};
-$('br').onclick=function(){$('rb').hidden=!$('rb').hidden};
-function imp(s){try{var o=JSON.parse(s);if(!o||!Array.isArray(o.rows))throw 0;var c=0;o.rows.forEach(function(r){if(!r||typeof r.id!=='string')return;
- if(r.t==='w'&&typeof r.date==='string'&&typeof r.kg==='number'&&r.kg>30&&r.kg<200){put({id:r.id,t:'w',date:r.date,kg:r.kg});c++}
- else if(r.t==='l'&&typeof r.ts==='number'&&typeof r.text==='string'){put({id:r.id,t:'l',ts:r.ts,day:String(r.day||'').slice(0,3),text:r.text.slice(0,1500)});c++}
- else if(r.t==='t'&&typeof r.ts==='number'&&typeof r.min==='number'){put({id:r.id,t:'t',ts:r.ts,min:r.min});c++}
- else if(r.t==='p'&&typeof r.kg==='number'&&typeof r.goal==='number'){put({id:'profile',t:'p',kg:r.kg,goal:r.goal,h:r.h||null,a:r.a||null,s:r.s||null,d:r.d||null});c++}});
- $('tst').textContent='Записи восстановлены: '+c+'.';$('rb').hidden=true}catch(e){$('tst').textContent='Не удалось прочитать копию.'}}
-$('ri').onclick=function(){imp($('rt').value)};$('rf').onclick=function(){$('bf').click()};
-$('bf').onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){imp(r.result)};r.readAsText(f)};
+function warn(){}
+function mark(){}
 try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}catch(e){}
 
 /* вкладки */
@@ -360,7 +349,8 @@ try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist()}
   order.forEach(function(k){var el=document.getElementById('pg-'+k);if(el)el.hidden=(k!==p)});
   [].forEach.call(document.querySelectorAll('.tabbar button'),function(b){b.setAttribute('aria-selected',String(b.getAttribute('data-p')===p))});
   var nav=document.querySelector('.tabbar');if(nav)nav.style.setProperty('--i',order.indexOf(p));
-  document.getElementById('gtxt').textContent=(p==='plan')?'Ас-Саляму Алейкум':'GymMura';
+  document.getElementById('gtxt').textContent=(p==='plan')?'As Salam Alaikum':'GymX';
+  document.getElementById('greet').classList.toggle('en',p==='plan');
   document.getElementById('gico').hidden=(p==='plan');
   document.getElementById('sub').hidden=(p!=='plan');
   window.scrollTo(0,0);
@@ -406,7 +396,14 @@ try{
  let db;
  try{db=F.initializeFirestore(app,{localCache:F.persistentLocalCache({tabManager:F.persistentMultipleTabManager()})})}catch(e){db=F.getFirestore(app)}
  window.gpSignOut=()=>U.signOut(auth);
- window.gpWipe=async function(){if(!auth.currentUser)return;const s=await F.getDocs(F.collection(db,'users',auth.currentUser.uid,'entries'));await Promise.all(s.docs.map(function(d){return F.deleteDoc(d.ref)}))};
+ window.gpWipe=async function(){if(!auth.currentUser)return;const uid=auth.currentUser.uid;const s=await F.getDocs(F.collection(db,'users',uid,'entries'));await Promise.all(s.docs.map(function(d){return F.deleteDoc(d.ref)}));const bk=await F.getDocs(F.collection(db,'users',uid,'backups'));await Promise.all(bk.docs.map(function(d){return F.deleteDoc(d.ref)}))};
+window.gpBackup=async function(rows){
+ if(!auth.currentUser||!rows||!rows.length)return;
+ const d=new Date(),id=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2),key='gp1_bk_'+auth.currentUser.uid+'_'+id;
+ try{if(localStorage.getItem(key))return}catch(e){}
+ await F.setDoc(F.doc(db,'users',auth.currentUser.uid,'backups',id),{ts:Date.now(),count:rows.length,rows:JSON.stringify(rows)});
+ try{localStorage.setItem(key,'1')}catch(e){}
+};
  $('ab').disabled=false;
  $('ab').onclick=async()=>{
   if(auth.currentUser){await U.signOut(auth);return}
